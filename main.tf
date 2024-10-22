@@ -99,6 +99,7 @@ resource "aws_security_group" "allow_ssh" {
 
 resource "aws_s3_bucket" "js_bucket" {
   bucket = var.s3_bucket_name
+  force_destroy = true
 
   tags = {
     Name = "js-tf-s3-bucket"
